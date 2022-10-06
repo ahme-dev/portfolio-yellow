@@ -12,6 +12,7 @@
     <a class="vlink" href="https://d.ahmed.systems"> D </a>
     <a class="vlink" href="https://e.ahmed.systems"> E </a>
     <a class="selected" href="https://f.ahmed.systems"> F </a>
+    <a class="vlink" href="https://e.ahmed.systems"> E </a>
   </div>
 </template>
 
