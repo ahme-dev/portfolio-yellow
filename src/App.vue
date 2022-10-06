@@ -1,5 +1,6 @@
 <script setup lang="ts">
   import { useNow, useDateFormat } from "@vueuse/core";
+  import Version from "./components/Version.vue";
 
   const formatted = useDateFormat(useNow(), "dddd");
 </script>
@@ -166,5 +167,6 @@
       <!-- skills end -->
     </main>
     <!-- main end -->
+    <Version />
   </div>
 </template>
