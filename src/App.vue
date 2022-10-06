@@ -16,11 +16,19 @@
         v-motion-fade-visible
         :delay="100"
       >
-        <a href="#projects" class="text-xl font-bold cursor-pointer"
+        <a
+          href="#projects"
+          class="text-xl font-bold cursor-pointer hover:(text-amber-200)"
           >Projects</a
         >
-        <a href="#skills" class="text-xl font-bold cursor-pointer">Skills</a>
-        <a href="#experience" class="text-xl font-bold cursor-pointer"
+        <a
+          href="#skills"
+          class="text-xl font-bold cursor-pointer hover:(text-amber-200)"
+          >Skills</a
+        >
+        <a
+          href="#experience"
+          class="text-xl font-bold cursor-pointer hover:(text-amber-200)"
           >Experience</a
         >
       </nav>
