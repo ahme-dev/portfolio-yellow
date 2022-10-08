@@ -14,11 +14,7 @@
     <!-- header -->
     <header id="header" class="grid md:(grid-cols-2 p-16) p-8 h-screen">
       <!-- navigate -->
-      <nav
-        class="flex gap-8 justify-center md:(self-start justify-start)"
-        v-motion-fade-visible
-        :delay="100"
-      >
+      <nav class="flex gap-8 justify-center md:(self-start justify-start)">
         <a
           v-for="el in ['Projects', 'Skills', 'Contact']"
           :href="'#' + el.toLocaleLowerCase()"
@@ -31,8 +27,6 @@
       <!-- name -->
       <div
         class="flex flex-col gap-8 items-start justify-center md:(self-start)"
-        v-motion-fade-visible
-        :delay="100"
       >
         <h1 class="text-5xl font-bold">
           I am
@@ -45,8 +39,6 @@
       <!-- date -->
       <div
         class="flex flex-col md:(justify-start) items-end justify-center md:(row-start-1 col-start-2 row-span-3)"
-        v-motion-pop-visible
-        :delay="200"
         v-if="formatted"
       >
         <h1 class="text-5xl font-bold">Good</h1>
@@ -132,7 +124,7 @@
         <h1 class="text-5xl font-bold" v-motion-fade-visible :delay="100">
           Contact
         </h1>
-        <Contact></Contact>
+        <Contact v-motion-slide-visible-bottom></Contact>
       </section>
       <!-- contact end -->
       <section
