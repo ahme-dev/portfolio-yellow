@@ -1,6 +1,7 @@
 <script setup lang="ts">
   import { useNow, useDateFormat } from "@vueuse/core";
   import Version from "./components/Version.vue";
+  import { info, skills, projects } from "./info";
 
   const formatted = useDateFormat(useNow(), "dddd");
 </script>
@@ -18,20 +19,11 @@
         :delay="100"
       >
         <a
-          href="#projects"
+          v-for="el in ['Projects', 'Skills', 'Experience']"
+          :href="'#' + el.toLocaleLowerCase()"
           class="text-xl font-bold cursor-pointer hover:(text-amber-200)"
-          >Projects</a
-        >
-        <a
-          href="#skills"
-          class="text-xl font-bold cursor-pointer hover:(text-amber-200)"
-          >Skills</a
-        >
-        <a
-          href="#experience"
-          class="text-xl font-bold cursor-pointer hover:(text-amber-200)"
-          >Experience</a
-        >
+          >{{ el }}
+        </a>
       </nav>
       <!-- navigate end -->
 
@@ -43,12 +35,9 @@
       >
         <h1 class="text-6xl font-bold">
           I am
-          <span class="text-amber-200">Ahmed</span>
+          <span class="text-amber-200">{{ info.name }}</span>
         </h1>
-        <p class="text-3xl">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem nam
-          repudiandae nemo.
-        </p>
+        <p class="text-3xl">{{ info.about }}</p>
       </div>
       <!-- name end -->
 
@@ -84,44 +73,20 @@
         <h1 class="text-6xl font-bold" v-motion-fade-visible :delay="100">
           Projects
         </h1>
-        <div class="grid grid-cols-1 md:(grid-cols-2) gap-8">
+        <div class="grid grid-cols-1 md:(grid-cols-2 px-8) gap-8">
           <!-- items -->
           <div
+            v-for="el in projects"
             class="flex flex-col gap-4 py-4 border-t-true-gray-700 border-t-8"
             v-motion-slide-visible-bottom
             :delay="200"
           >
-            <h2 class="text-3xl italic font-semibold">JournalV</h2>
+            <h2 class="text-3xl italic font-semibold">{{ el }}</h2>
             <p class="text-2xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non
               rerum nisi, minus est eos voluptas aperiam asperiores?
             </p>
           </div>
-
-          <div
-            class="flex flex-col gap-4 py-4 border-t-true-gray-700 border-t-8"
-            v-motion-slide-visible-bottom
-            :delay="200"
-          >
-            <h2 class="text-3xl italic font-semibold">Centerm</h2>
-            <p class="text-2xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non
-              rerum nisi, minus est eos voluptas aperiam asperiores?
-            </p>
-          </div>
-
-          <div
-            class="flex flex-col gap-4 py-4 border-t-true-gray-700 border-t-8"
-            v-motion-slide-visible-bottom
-            :delay="200"
-          >
-            <h2 class="text-3xl italic font-semibold">Gettube</h2>
-            <p class="text-2xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non
-              rerum nisi, minus est eos voluptas aperiam asperiores?
-            </p>
-          </div>
-
           <!-- items end -->
         </div>
       </section>
@@ -139,28 +104,15 @@
         >
           Skills
         </h1>
-        <div class="grid grid-cols-1 md:(grid-cols-3) gap-8">
+        <div class="grid grid-cols-1 md:(grid-cols-3 px-8) gap-8">
           <!-- items -->
           <h2
+            v-for="el in skills"
             class="text-3xl italic font-semibold p-4 rounded-2xl bg-amber-200"
             v-motion-slide-visible-bottom
             :delay="200"
           >
-            Javascript/Typescript
-          </h2>
-          <h2
-            class="text-3xl italic font-semibold p-4 rounded-2xl bg-amber-200"
-            v-motion-slide-visible-bottom
-            :delay="200"
-          >
-            Go
-          </h2>
-          <h2
-            class="text-3xl italic font-semibold p-4 rounded-2xl bg-amber-200"
-            v-motion-slide-visible-bottom
-            :delay="200"
-          >
-            Linux
+            {{ el }}
           </h2>
         </div>
       </section>
