@@ -20,9 +20,9 @@
         :delay="100"
       >
         <a
-          v-for="el in ['Projects', 'Skills', 'Experience']"
+          v-for="el in ['Projects', 'Skills', 'Contact']"
           :href="'#' + el.toLocaleLowerCase()"
-          class="text-xl font-bold cursor-pointer hover:(text-amber-200 duration-300 duration-300)"
+          class="text-xl p-2 font-bold cursor-pointer hover:(text-amber-200 duration-300 duration-300)"
           >{{ el }}
         </a>
       </nav>
@@ -129,12 +129,29 @@
         id="contact"
         class="flex flex-col gap-16 min-h-screen p-8 md:(p-16) bg-amber-200 text-xl"
       >
-        <h1 class="text-6xl font-bold" v-motion-fade-visible :delay="100">
+        <h1 class="text-5xl font-bold" v-motion-fade-visible :delay="100">
           Contact
         </h1>
         <Contact></Contact>
       </section>
       <!-- contact end -->
+      <section
+        id="contact"
+        class="flex flex-col items-start justify-evenly gap-4 p-8 md:(p-16 flex-row) text-xl text-true-gray-400"
+      >
+        <div>
+          <h1>Email: ahmadkabdullah@pm.me</h1>
+          <h1>Phone: 0770 123 4567</h1>
+        </div>
+        <div>
+          <h1>
+            Source:
+            <a href="https://github.com/ahmedkabd/f.ahmed.systems">
+              github.com/ahmedkabd/f.ahmed.systems
+            </a>
+          </h1>
+        </div>
+      </section>
     </footer>
     <!-- footer end -->
     <Version />
