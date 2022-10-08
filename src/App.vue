@@ -2,6 +2,7 @@
   import { useNow, useDateFormat } from "@vueuse/core";
   import Version from "./components/Version.vue";
   import { info, skills, projects } from "./info";
+  import Contact from "./components/Contact.vue";
 
   const formatted = useDateFormat(useNow(), "dddd");
 </script>
@@ -119,6 +120,22 @@
       <!-- skills end -->
     </main>
     <!-- main end -->
+
+    <!-- footer -->
+    <footer id="footer" class="text-true-gray-700 min-h-screen">
+      <!-- contact -->
+      <section
+        id="contact"
+        class="flex flex-col gap-16 min-h-screen p-8 md:(p-16) bg-amber-200 text-xl"
+      >
+        <h1 class="text-6xl font-bold" v-motion-fade-visible :delay="100">
+          Contact
+        </h1>
+        <Contact></Contact>
+      </section>
+      <!-- contact end -->
+    </footer>
+    <!-- footer end -->
     <Version />
   </div>
 </template>
