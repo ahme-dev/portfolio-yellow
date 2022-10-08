@@ -52,7 +52,11 @@
           name="message"
         />
       </div>
-      <input type="submit" value="Submit" />
+      <input
+        class="px-4 py-2 rounded-2xl cursor-pointer hover:(duration-300 bg-amber-200 text-true-gray-700)"
+        type="submit"
+        value="Submit"
+      />
     </form>
     <!-- contact form end -->
 
@@ -63,7 +67,7 @@
       <h1 class="font-bold">New Message!</h1>
 
       <p
-        class="border-l-amber-200 border-l-3 px-2 italic text-xl"
+        class="border-l-amber-200 border-l-3 px-2 italic text-xl overflow-y-scroll max-h-54"
         v-if="formData.message"
       >
         {{ formData.message }}
