@@ -34,11 +34,11 @@
         v-motion-fade-visible
         :delay="100"
       >
-        <h1 class="text-6xl font-bold">
+        <h1 class="text-5xl font-bold">
           I am
           <span class="text-amber-200">{{ info.name }}</span>
         </h1>
-        <p class="text-3xl">{{ info.about }}</p>
+        <p class="text-2xl">{{ info.about }}</p>
       </div>
       <!-- name end -->
 
@@ -47,8 +47,9 @@
         class="flex flex-col md:(justify-start) items-end justify-center md:(row-start-1 col-start-2 row-span-3)"
         v-motion-pop-visible
         :delay="200"
+        v-if="formatted"
       >
-        <h1 class="text-6xl font-bold">Good</h1>
+        <h1 class="text-5xl font-bold">Good</h1>
         <h1 class="text-4xl font-bold text-amber-200">
           {{ formatted }}
         </h1>
@@ -71,7 +72,7 @@
         id="projects"
         class="flex flex-col gap-16 min-h-screen bg-amber-200 p-8 md:(p-16)"
       >
-        <h1 class="text-6xl font-bold" v-motion-fade-visible :delay="100">
+        <h1 class="text-5xl font-bold" v-motion-fade-visible :delay="100">
           Projects
         </h1>
         <div class="grid grid-cols-1 md:(grid-cols-2 px-8) gap-8">
@@ -82,8 +83,8 @@
             v-motion-slide-visible-bottom
             :delay="200"
           >
-            <h2 class="text-3xl italic font-semibold">{{ el }}</h2>
-            <p class="text-2xl">
+            <h2 class="text-2xl italic font-semibold">{{ el }}</h2>
+            <p class="text-xl">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel non
               rerum nisi, minus est eos voluptas aperiam asperiores?
             </p>
@@ -99,7 +100,7 @@
         class="flex flex-col gap-16 min-h-screen p-8 md:(p-16)"
       >
         <h1
-          class="text-6xl font-bold text-amber-200"
+          class="text-5xl font-bold text-amber-200"
           v-motion-fade-visible
           :delay="100"
         >
@@ -109,7 +110,7 @@
           <!-- items -->
           <h2
             v-for="el in skills"
-            class="text-3xl italic font-semibold p-4 rounded-2xl bg-amber-200 hover:(shadow-xl duration-300 cursor-pointer)"
+            class="text-2xl italic font-semibold p-4 rounded-2xl bg-amber-200 hover:(shadow-xl duration-300 cursor-pointer)"
             v-motion-slide-visible-bottom
             :delay="200"
           >
