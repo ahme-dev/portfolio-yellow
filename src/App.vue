@@ -21,7 +21,7 @@
         <a
           v-for="el in ['Projects', 'Skills', 'Experience']"
           :href="'#' + el.toLocaleLowerCase()"
-          class="text-xl font-bold cursor-pointer hover:(text-amber-200)"
+          class="text-xl font-bold cursor-pointer hover:(text-amber-200 duration-300 duration-300)"
           >{{ el }}
         </a>
       </nav>
@@ -77,7 +77,7 @@
           <!-- items -->
           <div
             v-for="el in projects"
-            class="flex flex-col gap-4 py-4 border-t-true-gray-700 border-t-8"
+            class="flex flex-col gap-4 p-4 border-t-true-gray-700 border-t-8 hover:(shadow-xl duration-300 cursor-pointer bg-true-gray-700 text-true-gray-200)"
             v-motion-slide-visible-bottom
             :delay="200"
           >
@@ -108,7 +108,7 @@
           <!-- items -->
           <h2
             v-for="el in skills"
-            class="text-3xl italic font-semibold p-4 rounded-2xl bg-amber-200"
+            class="text-3xl italic font-semibold p-4 rounded-2xl bg-amber-200 hover:(shadow-xl duration-300 cursor-pointer)"
             v-motion-slide-visible-bottom
             :delay="200"
           >
