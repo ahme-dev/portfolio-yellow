@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import { useNow, useDateFormat } from "@vueuse/core";
-  import Version from "./components/Version.vue";
   import { info, skills, projects } from "./info";
   import Contact from "./components/Contact.vue";
 
@@ -146,6 +145,5 @@
       </section>
     </footer>
     <!-- footer end -->
-    <Version />
   </div>
 </template>
