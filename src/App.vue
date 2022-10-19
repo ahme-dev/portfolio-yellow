@@ -138,8 +138,8 @@
         <div>
           <h1>
             Source:
-            <a href="https://github.com/ahmedkabd/f.ahmed.systems">
-              github.com/ahmedkabd/f.ahmed.systems
+            <a href="https://github.com/ahmedkabd/portfolio-yellow">
+              github.com/ahmedkabd/portfolio-yellow
             </a>
           </h1>
         </div>
